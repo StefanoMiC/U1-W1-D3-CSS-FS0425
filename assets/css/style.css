@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;400;600&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap");
+
+/* 
+
+* {
+  text-decoration: underline;
+} 
+  
+*/
+h1 {
+  color: red;
+  font-style: italic;
+  font-size: 30px;
+  /* applicazione di font google (import fatto nel tag head dell'html) */
+  font-family: "IBM Plex Serif", serif;
+}
+
+p strong {
+  color: red;
+}
+
+ul,
+ol {
+  background-color: palegoldenrod;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+}
+
+p {
+  font-size: 20px;
+}
+
+div {
+  font-size: 11px;
+}
+
+div p {
+  font-size: 2rem;
+  font-family: Brush Script MT, cursive;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section p {
+  font-family: "Courier New", Courier, monospace;
+}

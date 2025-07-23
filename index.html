@@ -4,12 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;400;600&display=swap" rel="stylesheet"> -->
+
     <title>U1 W1 D3 CSS</title>
+
+    <!-- 2) -->
+    <style>
+        p {
+            font-size: 10px;
+        }
+
+        /* per il meccanismo del "cascade" il browser applicherà sempre l'ultima regola tra due in conflitto (vincerà quella del CSS esterno) */
+        p {
+            font-size: 16px;
+        }
+    </style>
+
+    <!-- 3 -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-
     <h1>U1 W1 D3 CSS</h1>
+    <h2>3 modi per utilizzare CSS</h2>
+    <ol>
+        <li> INLINE</li>
+        <li> CSS INTERNO</li>
+        <li> CSS ESTERNO</li>
+    </ol>
+    <!-- 1) -->
+    <p style="font-family:Verdana, Geneva, Tahoma, sans-serif; color: paleturquoise; font-size: 50px;">Sono un
+        paragrafo che sfrutta CSS
+        INLINE</p>
+
+    <!-- 2) -->
+    <p>Lorem ipsum, dolor sit amet
+        consectetur adipisicing elit. <strong>Harum nobis quos perspiciatis.</strong> Pariatur ratione
+        reiciendis, molestias odit id modi sunt maxime nemo quisquam, deleniti tempora. Magni assumenda deleniti
+        provident totam?</p>
+
+    <strong>strong esterno</strong>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repellat molestias neque, explicabo quibusdam
+            consequatur magnam. Quod illo dolor nam laborum aut at deleniti nihil incidunt temporibus, veniam id? Ipsum.
+        </p>
+    </div>
+
+    <section>
+        <p>prova di font monospaced</p>
+    </section>
+
+    <h4>Esempio di allineamento dell'immagine come fosse testo</h4>
+    <div style="text-align: center;">
+        <img src="https://images.unsplash.com/photo-1682687982502-1529b3b33f85?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="scuba diver" width="300">
+    </div>
+
+    <h4 style="text-shadow: 10px 5px 3px palegreen;">Esempio di allineamento dell'immagine come blocco</h4>
+
+    <img style="display: block; margin-inline: auto;"
+        src="https://images.unsplash.com/photo-1682687982502-1529b3b33f85?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="scuba diver" width="300">
 
 </body>
 

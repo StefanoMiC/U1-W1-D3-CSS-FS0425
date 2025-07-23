@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+
+    <style>
+        /* La specificità è una proprietà intrinseca dei selettori che garantisce più o meno forza nell'applicare 
+        le proprie regole, rispetto ad altre simili, su uno stesso elemento */
+
+        /* l'ordine di importanza è 
+
+        1) !important, 
+        2) stile inline, 
+        3) id, 
+        4) classi, 
+        5) tag name
+        
+        */
+
+        /* facendo l'hover sui selettori puoi avere una preview della specificità del selettore */
+
+        /* Specificity (id, classi, tag) */
+
+        /* se il browser si trova nella condizione di avere, su uno stesso elemento, la stessa regola applicata da selettori diversi
+        dovrà decidere a quale dare priorità. Si va quindi a valutare la "forza" o specificità del selettore per dedicere quale tra le tante
+        regole color, in questo caso, applicare all'elemento h2
+         */
+
+        /* in questo momento vince lo style inline (vedi sotto)
+        altrimenti vincerebbe questo id */
+        #second-title {
+            color: blue;
+        }
+
+        .title {
+            color: yellow;
+            font-size: 30px;
+        }
+
+        html body h2 {
+            /* se usassimo la regola important su questo, anche se meno specifico, vincerebbe,
+             perché !important è all'apice della scala di forza e vincerebbe anche su uno stile applicato inline */
+
+            /* color: red !important;  */
+            color: red
+        }
+
+        .section-text {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+
+        p {
+            font-size: 20px;
+        }
+
+        section.colored-section {
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 id="second-title" class="title" style="color: purple">Titolo secondario</h2>
+
+    <section class="colored-section">
+        <!-- le classi sono dei contenitori di stile da applicare selettivamente agli elementi che vogliamo modificare -->
+        <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis recusandae quibusdam
+            dignissimos tenetur,
+            hic debitis odio, voluptatibus, amet in enim id nam? Corrupti reprehenderit mollitia repellat pariatur ipsum
+            saepe illum!</p>
+    </section>
+
+    <section>
+        <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cumque veritatis
+            harum numquam
+            repudiandae officia magni consectetur perferendis quos libero consequatur molestias, provident ab dicta id
+            laudantium doloremque. Facere, autem.</p>
+    </section>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed doloribus quae commodi nostrum nobis voluptate
+        fugiat consequuntur, optio porro fuga excepturi iusto quod quos nesciunt rem temporibus dignissimos dolore
+        omnis.</p>
+
+</body>
+
+</html>
